@@ -433,7 +433,7 @@ export default function App() {
               <CaseBriefingTab
                 currentCase={currentCase}
                 investigation={currentInvestigation}
-                onOpenDirectory={() => {
+                onGoToDirectory={() => {
                   soundEngine.playPageFlip();
                   setActiveTab('directory');
                 }}
@@ -442,7 +442,10 @@ export default function App() {
 
 
             {activeTab === 'newspaper' && (
-              <NewspaperTab currentCase={currentCase} />
+              <NewspaperTab
+                clipping={currentCase.newspaperClipping}
+                caseTitle={currentCase.title}
+              />
             )}
 
             {activeTab === 'directory' && (
@@ -458,6 +461,10 @@ export default function App() {
                 currentCase={currentCase}
                 investigation={currentInvestigation}
                 onNotesChange={handleNotesChange}
+                onGoToDeduction={() => {
+                  soundEngine.playPageFlip();
+                  setActiveTab('deduction');
+                }}
               />
             )}
 

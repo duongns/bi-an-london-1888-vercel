@@ -1,4 +1,4 @@
-import { DetectiveCase, PlayerInvestigationState, ScoreResult } from '../types/detective.ts';
+import { DetectiveCase, PlayerInvestigationState, ScoreResult, CaseReward } from '../types/detective.ts';
 
 export function calculateScore(
   answers: Record<string, string>,
