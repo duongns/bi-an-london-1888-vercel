@@ -35,5 +35,8 @@
     "typescript": "^7.0.2",
     "@types/express": "^4.17.21",
     "@vercel/node": "^5.5.20"
+  },
+  "overrides": {
+    "esbuild": "$esbuild"
   }
 }
